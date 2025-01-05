@@ -1,8 +1,9 @@
 import { Injectable } from '@nestjs/common';
+import { CreateOrderRequest } from './dto/create-order.request';
 
 @Injectable()
 export class OrdersService {
-  getHello(): string {
-    return 'Hello World 5';
+  async createOrder(request: CreateOrderRequest) {
+    console.log(request);
   }
 }
